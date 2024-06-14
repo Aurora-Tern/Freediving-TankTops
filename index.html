@@ -10,6 +10,7 @@
             color: #000;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
         }
         #background {
             position: fixed;
@@ -43,9 +44,9 @@
             padding: 20px;
             position: relative;
             z-index: 1;
+            text-align: center;
         }
         header {
-            text-align: center;
             padding: 50px 0;
         }
         header h1 {
@@ -59,6 +60,7 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 10px 0;
             border-radius: 10px;
+            margin-bottom: 30px;
         }
         nav a {
             color: #fff;
@@ -76,7 +78,6 @@
         }
         .section {
             padding: 50px 0;
-            text-align: center;
         }
         .highlight {
             background: rgba(0, 0, 0, 0.7);
@@ -86,15 +87,16 @@
             display: inline-block;
             font-size: 1.5em;
             line-height: 1.5;
-            text-align: center;
             animation: textAnimation 3s infinite alternate;
+            max-width: 800px;
+            margin: 0 auto;
         }
         @keyframes textAnimation {
             0% {
                 transform: scale(1);
             }
             100% {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
         }
         .product-grid {
@@ -110,6 +112,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             width: 200px;
+            text-align: center;
         }
         .product img {
             width: 100%;
@@ -157,6 +160,63 @@
             border-radius: 10px;
             text-align: center;
             animation: textAnimation 3s infinite alternate;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .product-description {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .product-description h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .product-description p, .product-description ul {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .product-description ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .product-description img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .design-section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .design-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .design-section p, .design-section ul {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .design-section img {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -180,6 +240,18 @@
             </div>
         </section>
 
+        <section id="design" class="section">
+            <div class="design-section">
+                <h2>設計圖</h2>
+                <p>正面是浪花造型設計的OCEAN搭配浮球底鉛，背面是自潛三寶。</p>
+                <img src="D:/FD/服裝/images/設計圖.jpg" alt="Design Image">
+                <h2>設計介紹</h2>
+                <p><strong>正面設計：</strong> 正面以浪花造型的“OCEAN”字樣為主，搭配浮球底鉛，象徵大海的廣闊與深邃，喚起潛水者對海洋的熱愛與敬畏。</p>
+                <p><strong>背面設計：</strong> 背面設有“缺潛伴”文字及自潛三寶（面鏡、蛙鞋、呼吸管）圖案，這些元素象徵自潛生活的核心，促進潛水愛好者之間的互動與交流。</p>
+                <p><strong>設計故事：</strong> 這款背心的設計靈感來自我們曾是“潛水孤兒”的經歷，旨在促進潛水愛好者之間的交流。希望每位穿著者都能感受到來自同好的支持，隨時找到志同道合的潛伴，享受自潛的樂趣與美好回憶。</p>
+            </div>
+        </section>
+
         <section id="products" class="section">
             <h2>商品圖</h2>
             <div class="product-grid">
@@ -191,18 +263,23 @@
                 <div class="product">
                     <img src="images/LINE_ALBUM_2024613_240613_4.jpg" alt="Tank Top 2">
                     <h3>背面</h3>
-                    <p>NTD$ 590</p>
                 </div>
                 <div class="product">
-                    <img src="images/Henry.jpg" alt="Tank Top 3">
-                    <h3>側拍</h3>
-                    <p>NTD$ 590</p>
+                    <img src="D:/FD/服裝/images/Henry.jpg" alt="Product Image">
+                    <h3>商品圖</h3>
                 </div>
-                <div class="product">
-                    <img src="images/Henry1.jpg" alt="Tank Top 4">
-                    <h3>側拍2</h3>
-                    <p>NTD$ 590</p>
-                </div>
+            </div>
+            <div class="product-description">
+                <h2>商品介紹</h2>
+                <p>這款32支純棉背心，提供黑色和普魯士藍兩種顏色。尺碼涵蓋S、M、L、XL、2XL、3XL，版型偏合身，建議購買比平時穿著大一號。也可參考尺寸表，選擇最適合的尺寸。</p>
+                <p>優點：</p>
+                <ul>
+                    <li>高品質材料：純棉材質，柔軟舒適，透氣性佳。</li>
+                    <li>合身設計：適合各種體型，穿著舒適自然。</li>
+                    <li>多種顏色：黑色與普魯士藍，簡約時尚，百搭易穿。</li>
+                    <li>耐穿耐洗：高支數棉布，經久耐用，不易變形。</li>
+                </ul>
+                <img src="images/S__8798446.jpg" alt="Size Chart" style="width: 800px; height: auto;">
             </div>
         </section>
 
