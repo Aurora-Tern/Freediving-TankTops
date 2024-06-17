@@ -31,10 +31,11 @@
             }
             50% {
                 opacity: 0.4;
+                background-image: url('images/BACK1.png');
             }
             100% {
                 opacity: 0.8;
-                background-image: url('images/BACK1.png');
+                background-image: url('images/BACK.png');
             }
         }
         .container {
@@ -251,6 +252,8 @@
                 margin: 5px;
                 flex: 1 1 calc(33.333% - 10px);
                 box-sizing: border-box;
+                font-size: 0.9em;
+                padding: 8px 10px;
             }
             .contact-button {
                 padding: 20px 40px;
@@ -362,6 +365,9 @@
         </section>
     </div>
 
+    <!-- Background music -->
+    <audio id="background-music" src="images/MUSIC.mp3" loop></audio>
+
     <!-- Modal for image zoom -->
     <div id="modal" class="modal">
         <span class="close">&times;</span>
@@ -371,6 +377,14 @@
     </div>
 
     <script>
+        // Play background music
+        window.addEventListener('load', function() {
+            const backgroundMusic = document.getElementById('background-music');
+            backgroundMusic.play().catch(error => {
+                console.log('Auto-play was prevented:', error);
+            });
+        });
+
         // Image zoom functionality
         const modal = document.getElementById("modal");
         const modalImage = document.getElementById("modal-image");
