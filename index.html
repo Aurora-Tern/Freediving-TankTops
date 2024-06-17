@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,10 +138,10 @@
         }
         .contact-button {
             display: inline-block;
-            padding: 30px 60px;
+            padding: 20px 40px;
             background: #00bcd4;
             color: #fff;
-            font-size: 3em;
+            font-size: 1.5em;
             border-radius: 10px;
             text-decoration: none;
             cursor: pointer;
@@ -164,7 +164,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        .product-description {
+        .product-description, .design-section {
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
@@ -175,49 +175,67 @@
             max-width: 800px;
             margin: 20px auto;
         }
-        .product-description h2 {
+        .product-description h2, .design-section h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
-        .product-description p, .product-description ul {
+        .product-description p, .product-description ul, .design-section p, .design-section ul {
             margin-bottom: 10px;
             line-height: 1.5;
         }
-        .product-description ul {
+        .product-description ul, .design-section ul {
             list-style-type: disc;
             padding-left: 20px;
         }
-        .product-description img {
+        .product-description img, .design-section img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 20px auto;
         }
-        .design-section {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 20px auto;
+        .zoomable {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
         }
-        .design-section h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
+        .zoomable:hover {
+            transform: scale(1.1);
         }
-        .design-section p, .design-section ul {
-            margin-bottom: 10px;
-            line-height: 1.5;
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
         }
-        .design-section img {
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
             width: 100%;
             height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
         @media (max-width: 768px) {
             header h1 {
@@ -232,7 +250,7 @@
             }
             .contact-button {
                 padding: 20px 40px;
-                font-size: 2em;
+                font-size: 1.2em;
             }
             .about-text, .highlight, .design-section, .product-description {
                 font-size: 1em;
@@ -251,8 +269,10 @@
             <h1>缺潛伴背心</h1>
             <nav>
                 <a href="#home">首頁</a>
-                <a href="#products">商品</a>
-                <a href="#contact">聯繫購買小幫手</a>
+                <a href="#design">設計介紹</a>
+                <a href="#showcase">實穿展示</a>
+                <a href="#product">商品介紹</a>
+                <a href="#contact">購買小幫手</a>
                 <a href="#about">關於我們</a>
             </nav>
         </header>
@@ -260,17 +280,23 @@
         <section id="home" class="section">
             <div class="highlight">
                 <h2>各位缺潛伴的朋朋!買起來!</h2>
-                <p>曾經是潛水孤兒的我們，設計了一款讓彼此能開啟話題的背心，讓你潛伴滿滿.</p>
+                <p>曾經是潛水孤兒的我們，設計了一款讓彼此能開啟話題的背心，讓你潛伴滿滿。</p>
             </div>
         </section>
 
         <section id="design" class="section">
             <div class="design-section">
                 <h2>商品圖</h2>
-                <p>經典原黑</p>
-                <img src="images/商品圖2.jpg" alt="經典原黑">
-                <p>普魯士藍</p>
-                <img src="images/設計圖.jpg" alt="普魯士藍">
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/商品圖2.jpg" alt="經典原黑">
+                        <h3>經典原黑</h3>
+                    </div>
+                    <div class="product">
+                        <img src="images/商品圖1.jpg" alt="普魯士藍">
+                        <h3>普魯士藍</h3>
+                    </div>
+                </div>
                 <h2>設計介紹</h2>
                 <p><strong>正面設計：</strong> 正面以浪花造型的“OCEAN”字樣為主，搭配浮球底鉛，象徵大海的廣闊與深邃，喚起潛水者對海洋的熱愛與敬畏。</p>
                 <p><strong>背面設計：</strong> 背面設有“缺潛伴”文字及自潛三寶（面鏡、蛙鞋、呼吸管）圖案，這些元素象徵自潛生活的核心，促進潛水愛好者之間的互動與交流。</p>
@@ -278,33 +304,44 @@
             </div>
         </section>
 
-        <section id="products" class="section">
-            <h2>商品圖</h2>
+        <section id="showcase" class="section">
+            <h2>實穿展示</h2>
             <div class="product-grid">
-                <div class="product">
-                    <img src="images/LINE_ALBUM_2024613_240613_3.jpg" alt="Tank Top 1">
-                    <h3>正面</h3>
+                <div class="product zoomable">
+                    <img src="images/實穿1.jpg" alt="實穿1">
+                    <h3>實穿展示 1</h3>
                 </div>
-                <div class="product">
-                    <img src="images/LINE_ALBUM_2024613_240613_4.jpg" alt="Tank Top 2">
-                    <h3>背面</h3>
+                <div class="product zoomable">
+                    <img src="images/實穿2.jpg" alt="實穿2">
+                    <h3>實穿展示 2</h3>
                 </div>
-                <div class="product">
-                    <img src="images/Henry.jpg" alt="Product Image">
-                    <h3>實穿照</h3>
+                <div class="product zoomable">
+                    <img src="images/實穿3.jpg" alt="實穿3">
+                    <h3>實穿展示 3</h3>
                 </div>
             </div>
+        </section>
+
+        <section id="product" class="section">
             <div class="product-description">
-                <h2>商品介紹(NTD590)</h2>
-                <p>這款32支純棉背心，提供黑色和普魯士藍兩種顏色。尺碼涵蓋S、M、L、XL、2XL、3XL，版型偏合身，建議購買比平時穿著大一號。也可參考尺寸表，選擇最適合的尺寸。</p>
-                <p>優點：</p>
+                <h2>商品介紹(NTD 590)</h2>
+                <p>產品描述：</p>
+                <ul>
+                    <li>提供經典原黑和普魯士藍兩種顏色。</li>
+                    <li>尺碼涵蓋S、M、L、XL、2XL、3XL，版型偏合身，</li>
+                    <li>習慣寬鬆版型者建議購買比平時穿著大一號。</li>
+                    <li>也可參考尺寸表，選擇最適合的尺寸。</li>
+                    <li><img src="images/尺寸表.jpg" alt="尺寸表"></li>
+                    <li>背心採用32支純棉背心</li>
+                </ul>
+                <p>特點：</p>
                 <ul>
                     <li>高品質材料：純棉材質，柔軟舒適，透氣性佳。</li>
                     <li>合身設計：適合各種體型，穿著舒適自然。</li>
                     <li>多種顏色：黑色與普魯士藍，簡約時尚，百搭易穿。</li>
                     <li>耐穿耐洗：高支數棉布，經久耐用，不易變形。</li>
                 </ul>
-                <img src="images/S__8798446.jpg" alt="Size Chart" style="width: 800px; height: auto;">
+                <p>一件NTD 590</p>
             </div>
         </section>
 
@@ -315,9 +352,42 @@
 
         <section id="about" class="section">
             <div class="about-text">
-                <p>我們是愛好海洋跟自由潛水的人，也希望能透過這件背心的設計，讓大家能接觸到愛好海洋的潛伴們.</p>
+                <p>大家好！我們是極光燕（Aurora Tern），一個來自北極燕鷗靈感的品牌。我們熱愛海洋與自由潛水，希望通過這件背心的設計，讓更多人接觸到同樣愛好海洋的潛伴們。象徵無畏探索和持久活力，正如我們品牌所追求的精神：勇敢探索未知，享受無限可能。希望每位穿上我們背心的人，都能感受到這份熱情與支持，找到志同道合的夥伴，一起享受海洋的美好。</p>
             </div>
         </section>
     </div>
+
+    <!-- Modal for image zoom -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-image" src="">
+        </div>
+    </div>
+
+    <script>
+        // Image zoom functionality
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        const closeModal = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll('.zoomable').forEach(item => {
+            item.addEventListener('click', function(event) {
+                modal.style.display = "block";
+                modalImage.src = this.querySelector('img').src;
+                modalImage.style.transform = "scale(2)"; // Scale to 2 times
+            });
+        });
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
