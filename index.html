@@ -271,6 +271,25 @@
                 width: 150px;
             }
         }
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.9); /* 亮色背景 */
+            padding: 10px; /* 内边距 */
+            border-radius: 10px; /* 圆角 */
+        }
+        .logo-text-container img {
+            width: 150px;
+            margin-right: 20px;
+        }
+        .logo-text-container h2 {
+            font-size: 2em;
+            color: #000; /* 黑色文字 */
+            text-shadow: none; /* 去除文字阴影 */
+            margin: 0; /* 去除默认外边距 */
+        }
     </style>
 </head>
 <body>
@@ -290,7 +309,10 @@
 
         <section id="home" class="section">
             <div class="highlight">
-                <h2>各位缺潛伴的朋朋!買起來!</h2>
+                <div class="logo-text-container">
+                    <img src="images/極光燕.png" alt="極光燕標誌">
+                    <h2>各位缺潛伴的朋朋!買起來!</h2>
+                </div>
                 <p>曾經是潛水孤兒的我們，設計了一款讓彼此能開啟話題的背心，讓你潛伴滿滿。</p>
             </div>
         </section>
@@ -364,7 +386,6 @@
         <section id="about" class="section">
             <div class="about-text">
                 <p>大家好！我們是極光燕（Aurora Tern），一個來自北極燕鷗靈感的品牌。我們熱愛海洋與自由潛水，希望通過這件背心的設計，讓更多人接觸到同樣愛好海洋的潛伴們。象徵無畏探索和持久活力，正如我們品牌所追求的精神：勇敢探索未知，享受無限可能。希望每位穿上我們背心的人，都能感受到這份熱情與支持，找到志同道合的夥伴，一起享受海洋的美好。</p>
-                <img src="images/極光燕.jpg" alt="極光燕標誌" style="width: 100px; margin-top: 20px;">
             </div>
         </section>
     </div>
