@@ -122,6 +122,8 @@
         }
         .product img {
             width: 100%;
+            height: 250px; /* 保持高度一致 */
+            object-fit: cover; /* 裁剪圖片以適應容器 */
             border-radius: 10px;
             transition: transform 0.3s;
         }
@@ -130,7 +132,7 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         .product img:hover {
-            transform: scale(2);
+            transform: scale(1.5); /* 懸停放大1.5倍 */
         }
         .product h3 {
             font-size: 1.2em;
@@ -204,7 +206,7 @@
             transition: transform 0.3s ease-in-out;
         }
         .zoomable:hover {
-            transform: scale(2);
+            transform: scale(1.5);
         }
         .modal {
             display: none;
@@ -250,7 +252,7 @@
             margin-bottom: 20px;
             background: rgba(255, 255, 255, 0.9); /* 亮色背景 */
             padding: 10px; /* 内边距 */
-            border-radius: 10px; /* 圆角 */
+            border-radius: 10px; /* 圓角 */
         }
         .logo-text-container img {
             width: 150px;
@@ -259,7 +261,7 @@
         .logo-text-container h2 {
             font-size: 2em;
             color: #000; /* 黑色文字 */
-            text-shadow: none; /* 去除文字阴影 */
+            text-shadow: none; /* 去除文字陰影 */
             margin: 0; /* 去除默认外边距 */
         }
         @media (max-width: 768px) {
@@ -298,7 +300,16 @@
                 margin-bottom: 10px; /* 增加底部间距 */
             }
             .logo-text-container h2 {
-                font-size: 1.5em; /* 调整文字大小 */
+                font-size: 1.5em; /* 調整文字大小 */
+            }
+            .showcase-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+            .showcase-grid .product {
+                width: calc(50% - 10px);
             }
         }
     </style>
@@ -324,13 +335,13 @@
                     <img src="images/極光燕.png" alt="極光燕標誌">
                     <h2>各位缺潛伴的朋朋!買起來!</h2>
                 </div>
-                <p>曾經是潛水孤兒的我們，設計了一款讓彼此能開啟話題的背心，讓你潛伴滿滿。</p>
+                <p>曾是潛水孤兒的我們，設計了讓彼此開啟話題的背心，讓你潛伴滿滿。</p>
             </div>
         </section>
 
         <section id="design" class="section">
             <div class="design-section">
-                <h2>商品圖</h2>
+                <h2>設計理念</h2>
                 <div class="product-grid">
                     <div class="product">
                         <img src="images/商品圖2.jpg" alt="經典原黑">
@@ -341,45 +352,50 @@
                         <h3>普魯士藍</h3>
                     </div>
                 </div>
-                <h2>設計介紹</h2>
-                <p><strong>正面設計：</strong> 正面以浪花造型的“OCEAN”字樣為主，搭配浮球底鉛，象徵大海的廣闊與深邃，喚起潛水者對海洋的熱愛與敬畏。</p>
-                <p><strong>背面設計：</strong> 背面設有“缺潛伴”文字及自潛三寶（面鏡、蛙鞋、呼吸管）圖案，這些元素象徵自潛生活的核心，促進潛水愛好者之間的互動與交流。</p>
+                <p><strong>正面：</strong> 將“OCEAN”設計為浪花，搭配浮球底鉛，象徵大海的廣闊與深邃，喚起潛水者對海洋的熱愛與敬畏。</p>
+                <p><strong>背面：</strong> ”缺潛伴”文字及自潛三寶（面鏡、蛙鞋、呼吸管）圖案，這些元素象徵自潛生活的核心，提醒潛水愛好者不要忘記帶裝備及潛伴。</p>
             </div>
         </section>
 
         <section id="showcase" class="section">
             <h2>實穿展示</h2>
-            <div class="product-grid">
+            <div class="product-grid showcase-grid">
                 <div class="product zoomable">
                     <img src="images/實穿1.jpg" alt="實穿1">
-                    <h3>實穿展示 1</h3>
                 </div>
                 <div class="product zoomable">
                     <img src="images/實穿2.jpg" alt="實穿2">
-                    <h3>實穿展示 2</h3>
                 </div>
                 <div class="product zoomable">
                     <img src="images/實穿3.jpg" alt="實穿3">
-                    <h3>實穿展示 3</h3>
+                </div>
+            </div>
+            <div class="product-grid showcase-grid">
+                <div class="product zoomable">
+                    <img src="images/實穿4.jpg" alt="實穿4">
+                </div>
+                <div class="product zoomable">
+                    <img src="images/實穿5.jpg" alt="實穿5">
+                </div>
+                <div class="product zoomable">
+                    <img src="images/實穿6.jpg" alt="實穿6">
                 </div>
             </div>
         </section>
 
         <section id="product" class="section">
             <div class="product-description">
-                <h2>商品介紹(NTD 590)</h2>
-                <p>極光燕（Aurora Tern），來自北極燕鷗靈感的品牌，致力於將海洋的美好與自潛的熱愛融入每一款產品中。我們的自潛背心，不僅是衣物，更是海洋愛好者之間的聯繫與認同。</p>
+                <h2>商品介紹</h2>
+<h2>NTD 590<h2>
                 <h3>商品特色：</h3>
                 <ul>
-                    <li><strong>高品質材料：</strong> 採用32支純棉材質，柔軟舒適，透氣性佳。經久耐用，不易變形，適合各種體型。</li>
-                    <li><strong>合身設計：</strong> 版型偏合身，提供S、M、L、XL、2XL、3XL多種尺碼選擇。喜歡寬鬆版型者建議購買比平時大一號。參考尺寸表選擇最適合的尺寸。</li>
-                    <li><img src="images/尺寸表.jpg" alt="尺寸表"></li>
+                    <li><strong>高品質材料：</strong> 採用32支純棉材質，柔軟舒適，透氣性佳。經久耐用，不易變形。</li>
+                    <li><strong>合身設計：</strong> 版型合身，提供S、M、L、XL、2XL、3XL多種尺碼選擇(喜歡寬鬆版型者建議購買比平時大一號)。參考尺寸表選擇最適合的尺寸。</li>
+                     <img src="images/尺寸表.png" alt="尺寸表">
+<img src="images/試穿報告.png" alt="試穿報告">
+                   
                     <li><strong>顏色選擇：</strong> 經典原黑和普魯士藍，簡約時尚，百搭易穿。</li>
-                </ul>
-                <h3>設計靈感：</h3>
-                <p><strong>正面設計：</strong> 正面以浪花造型的“OCEAN”字樣為主，搭配浮球底鉛，象徵大海的廣闊與深邃，喚起潛水者對海洋的熱愛與敬畏。</p>
-                <p><strong>背面設計：</strong> 背面設有“缺潛伴”文字及自潛三寶（面鏡、蛙鞋、呼吸管）圖案，象徵自潛生活的核心，促進潛水愛好者之間的互動與交流。</p>
-            </div>
+                         </div>
         </section>
 
         <section id="contact" class="section">
@@ -394,9 +410,6 @@
         </section>
     </div>
 
-    <!-- Background music -->
-    <audio id="background-music" src="images/MUSIC.mp3" loop></audio>
-
     <!-- Modal for image zoom -->
     <div id="modal" class="modal">
         <span class="close">&times;</span>
@@ -406,14 +419,6 @@
     </div>
 
     <script>
-        // Play background music
-        window.addEventListener('load', function() {
-            const backgroundMusic = document.getElementById('background-music');
-            backgroundMusic.play().catch(error => {
-                console.log('Auto-play was prevented:', error);
-            });
-        });
-
         // Image zoom functionality
         const modal = document.getElementById("modal");
         const modalImage = document.getElementById("modal-image");
@@ -432,9 +437,4 @@
 
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-</body>
-</html>
+                modal.style
