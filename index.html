@@ -135,10 +135,6 @@
             margin: 10px 0 5px;
             color: #333;
         }
-        .product p {
-            margin: 0;
-            color: #555;
-        }
         .contact-button {
             display: inline-block;
             padding: 20px 40px;
@@ -286,7 +282,7 @@
                 padding: 15px;
             }
             .product {
-                width: 100%; /* Full width for products on small screens */
+                width: calc(50% - 10px); /* 2 columns on small screens */
             }
             .logo-text-container {
                 flex-direction: column; /* 垂直堆叠 */
@@ -297,15 +293,6 @@
             }
             .logo-text-container h2 {
                 font-size: 1.5em; /* 調整文字大小 */
-            }
-            .showcase-grid {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-            }
-            .showcase-grid .product {
-                width: calc(50% - 10px);
             }
         }
     </style>
@@ -401,7 +388,7 @@
 
         <section id="about" class="section">
             <div class="about-text">
-                <p>大家好！我們是極光燕（Aurora Tern），品牌靈感來自北極燕鷗。我們熱愛海洋與自由潛水，希望通過這件背心的設計，讓更多人接觸到同樣愛好海洋的潛伴們。極光燕象徵無畏探索和持久活力，正如我們品牌所追求的精神：勇敢探索未知，享受無限可能。希望每位穿上我們背心的人，都能感受到這份熱情與支持，找到志同道合的夥伴，一起享受海洋的美好。</p>
+                <p>大家好！我們是極光燕（Aurora Tern），一個來自北極燕鷗靈感的品牌。我們熱愛海洋與自由潛水，希望通過這件背心的設計，讓更多人接觸到同樣愛好海洋的潛伴們。象徵無畏探索和持久活力，正如我們品牌所追求的精神：勇敢探索未知，享受無限可能。希望每位穿上我們背心的人，都能感受到這份熱情與支持，找到志同道合的夥伴，一起享受海洋的美好。</p>
             </div>
         </section>
     </div>
