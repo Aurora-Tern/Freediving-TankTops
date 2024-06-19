@@ -22,23 +22,19 @@
             background-position: center;
             z-index: -1;
             opacity: 0.8;
-            animation: backgroundAnimation 20s infinite alternate;
+            animation: backgroundAnimation 60s infinite linear;
         }
         @keyframes backgroundAnimation {
             0% {
-                opacity: 0.8;
                 background-image: url('images/BACK.png');
             }
             33% {
-                opacity: 0.6;
                 background-image: url('images/BACK1.png');
             }
             66% {
-                opacity: 0.4;
                 background-image: url('images/BACK2.png');
             }
             100% {
-                opacity: 0.8;
                 background-image: url('images/BACK.png');
             }
         }
@@ -290,7 +286,7 @@
                 padding: 15px;
             }
             .product {
-                width: 150px;
+                width: 100%; /* Full width for products on small screens */
             }
             .logo-text-container {
                 flex-direction: column; /* 垂直堆叠 */
@@ -386,7 +382,7 @@
         <section id="product" class="section">
             <div class="product-description">
                 <h2>商品介紹</h2>
-                <h2>NTD 590<h2>
+                <h2>NTD 590</h2>
                 <h3>商品特色：</h3>
                 <ul>
                     <li><strong>高品質材料：</strong> 採用32支純棉材質，柔軟舒適，透氣性佳。經久耐用，不易變形。</li>
@@ -405,7 +401,7 @@
 
         <section id="about" class="section">
             <div class="about-text">
-                <p>大家好！我們是極光燕（Aurora Tern），一個來自北極燕鷗靈感的品牌。我們熱愛海洋與自由潛水，希望通過這件背心的設計，讓更多人接觸到同樣愛好海洋的潛伴們。象徵無畏探索和持久活力，正如我們品牌所追求的精神：勇敢探索未知，享受無限可能。希望每位穿上我們背心的人，都能感受到這份熱情與支持，找到志同道合的夥伴，一起享受海洋的美好。</p>
+                <p>大家好！我們是極光燕（Aurora Tern），品牌靈感來自北極燕鷗。我們熱愛海洋與自由潛水，希望通過這件背心的設計，讓更多人接觸到同樣愛好海洋的潛伴們。極光燕象徵無畏探索和持久活力，正如我們品牌所追求的精神：勇敢探索未知，享受無限可能。希望每位穿上我們背心的人，都能感受到這份熱情與支持，找到志同道合的夥伴，一起享受海洋的美好。</p>
             </div>
         </section>
     </div>
