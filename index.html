@@ -191,6 +191,7 @@
         .product-description ul, .design-section ul {
             list-style-type: disc;
             padding-left: 20px;
+            text-align: left;
         }
         .product-description img, .design-section img {
             max-width: 100%;
@@ -242,6 +243,25 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.9); /* 亮色背景 */
+            padding: 10px; /* 内边距 */
+            border-radius: 10px; /* 圆角 */
+        }
+        .logo-text-container img {
+            width: 150px;
+            margin-right: 20px;
+        }
+        .logo-text-container h2 {
+            font-size: 2em;
+            color: #000; /* 黑色文字 */
+            text-shadow: none; /* 去除文字阴影 */
+            margin: 0; /* 去除默认外边距 */
+        }
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
@@ -270,25 +290,16 @@
             .product {
                 width: 150px;
             }
-        }
-        .logo-text-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            background: rgba(255, 255, 255, 0.9); /* 亮色背景 */
-            padding: 10px; /* 内边距 */
-            border-radius: 10px; /* 圆角 */
-        }
-        .logo-text-container img {
-            width: 150px;
-            margin-right: 20px;
-        }
-        .logo-text-container h2 {
-            font-size: 2em;
-            color: #000; /* 黑色文字 */
-            text-shadow: none; /* 去除文字阴影 */
-            margin: 0; /* 去除默认外边距 */
+            .logo-text-container {
+                flex-direction: column; /* 垂直堆叠 */
+            }
+            .logo-text-container img {
+                margin-right: 0;
+                margin-bottom: 10px; /* 增加底部间距 */
+            }
+            .logo-text-container h2 {
+                font-size: 1.5em; /* 调整文字大小 */
+            }
         }
     </style>
 </head>
@@ -358,23 +369,17 @@
         <section id="product" class="section">
             <div class="product-description">
                 <h2>商品介紹(NTD 590)</h2>
-                <p>產品描述：</p>
+                <p>極光燕（Aurora Tern），來自北極燕鷗靈感的品牌，致力於將海洋的美好與自潛的熱愛融入每一款產品中。我們的自潛背心，不僅是衣物，更是海洋愛好者之間的聯繫與認同。</p>
+                <h3>商品特色：</h3>
                 <ul>
-                    <li>提供經典原黑和普魯士藍兩種顏色。</li>
-                    <li>尺碼涵蓋S、M、L、XL、2XL、3XL，版型偏合身，</li>
-                    <li>習慣寬鬆版型者建議購買比平時穿著大一號。</li>
-                    <li>也可參考尺寸表，選擇最適合的尺寸。</li>
-                    <li><img src="images/尺寸表.jpg" alt="尺寸表"></li>
-                    <li>背心採用32支純棉背心</li>
+                    <li><strong>高品質材料：</strong> 採用32支純棉材質，柔軟舒適，透氣性佳。經久耐用，不易變形，適合各種體型。</li>
+                    <li><strong>合身設計：</strong> 版型偏合身，提供S、M、L、XL、2XL、3XL多種尺碼選擇。喜歡寬鬆版型者建議購買比平時大一號。參考尺寸表選擇最適合的尺寸。</li>
+                    <li><strong>顏色選擇：</strong> 經典原黑和普魯士藍，簡約時尚，百搭易穿。</li>
                 </ul>
-                <p>特點：</p>
-                <ul>
-                    <li>高品質材料：純棉材質，柔軟舒適，透氣性佳。</li>
-                    <li>合身設計：適合各種體型，穿著舒適自然。</li>
-                    <li>多種顏色：黑色與普魯士藍，簡約時尚，百搭易穿。</li>
-                    <li>耐穿耐洗：高支數棉布，經久耐用，不易變形。</li>
-                </ul>
-                <p>一件NTD 590</p>
+                <h3>設計靈感：</h3>
+                <p><strong>正面設計：</strong> 正面以浪花造型的“OCEAN”字樣為主，搭配浮球底鉛，象徵大海的廣闊與深邃，喚起潛水者對海洋的熱愛與敬畏。</p>
+                <p><strong>背面設計：</strong> 背面設有“缺潛伴”文字及自潛三寶（面鏡、蛙鞋、呼吸管）圖案，象徵自潛生活的核心，促進潛水愛好者之間的互動與交流。</p>
+                <p><strong>設計故事：</strong> 這款背心的設計靈感來自我們曾是“潛水孤兒”的經歷，旨在促進潛水愛好者之間的交流。希望每位穿著者都能感受到來自同好的支持，隨時找到志同道合的潛伴，享受自潛的樂趣與美好回憶。</p>
             </div>
         </section>
 
